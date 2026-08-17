@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdant Life — Plant Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#" class="logo">Verdant<span>.</span></a>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#catalog">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Open Shopping Cart">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+        <div class="hero-content">
+            <span class="badge">Grounded & Botanical</span>
+            <h1>Bring Nature into Your Living Space</h1>
+            <p>Discover carefully curated house plants, succulents, and outdoor greens designed to transform your home environment.</p>
+            <div class="hero-buttons">
+                <a href="#catalog" class="btn btn-primary">Explore Plants</a>
+                <a href="#about" class="btn btn-outline">Our Philosophy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN SHOP CONTENT -->
+    <main class="main-content">
+        <section class="catalog-section" id="catalog">
+            <div class="section-header">
+                <h2>Our Plant Collection</h2>
+                <p>Curated with care for every lighting condition and interior style.</p>
+            </div>
+
+            <!-- FILTER CONTROLS -->
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Plants</button>
+                <button class="filter-btn" data-filter="indoor">Indoor</button>
+                <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+                <button class="filter-btn" data-filter="succulent">Succulents</button>
+            </div>
+
+            <!-- PRODUCT GRID -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Product 1 -->
+                <article class="product-card" data-category="indoor">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80" alt="Monstera Deliciosa">
+                        <span class="tag">Popular</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Indoor Plant</span>
+                        <h3>Monstera Deliciosa</h3>
+                        <p class="price">$38.00</p>
+                        <button class="btn btn-add-cart" data-id="1" data-title="Monstera Deliciosa" data-price="38.00" data-img="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80">
+              Add to Cart
+            </button>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card" data-category="succulent">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" alt="Echeveria Succulent">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Succulent</span>
+                        <h3>Echeveria Elegans</h3>
+                        <p class="price">$16.00</p>
+                        <button class="btn btn-add-cart" data-id="2" data-title="Echeveria Elegans" data-price="16.00" data-img="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80">
+              Add to Cart
+            </button>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card" data-category="indoor">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=600&q=80" alt="Snake Plant">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Indoor Plant</span>
+                        <h3>Snake Plant Laurentii</h3>
+                        <p class="price">$28.00</p>
+                        <button class="btn btn-add-cart" data-id="3" data-title="Snake Plant Laurentii" data-price="28.00" data-img="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=600&q=80">
+              Add to Cart
+            </button>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card" data-category="outdoor">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&q=80" alt="Olive Tree">
+                        <span class="tag">New</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Outdoor Plant</span>
+                        <h3>European Olive Tree</h3>
+                        <p class="price">$65.00</p>
+                        <button class="btn btn-add-cart" data-id="4" data-title="European Olive Tree" data-price="65.00" data-img="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&q=80">
+              Add to Cart
+            </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section" id="about">
+            <div class="about-card">
+                <h2>Sustainable & Grounded Philosophy</h2>
+                <p>Our plants are ethically sourced from local green nurseries. We focus on zero-plastic packaging, bio-organic soil nutrients, and long-lasting greenery for modern spaces.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- CART SIDE DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCartBtn">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-msg">Your cart is currently empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-checkout">Checkout</button>
+        </div>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">Verdant<span>.</span></a>
+                <p>Bringing natural tranquility to homes and offices worldwide.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#catalog">Shop</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Care Guides</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Verdant Life. Crafted with warm 2025/2026 UI aesthetics.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
